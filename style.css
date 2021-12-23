@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=VT323&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+
+    font-family: 'Roboto', sans-serif;
+
+    font-family: 'VT323', monospace;
+ */
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #c1d72f;
+  text-align: center;
+  color: rgb(35, 35, 36);
+}
+.desc h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+.desc .category {
+  margin-top: 25px;
+}
+.word {
+  display: flex;
+  gap: 10px;
+  margin-top: 50px;
+}
+.chars {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 700px;
+  margin: 50px 0;
+}
+.char {
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.char:hover {
+  border: 1px solid white;
+  background: none;
+  transition: 0.3s;
+}
+
+.word > li {
+  font-size: 3rem;
+  font-family: "VT323", monospace;
+}
+.game {
+  margin-top: 25px;
+  width: 400px;
+  height: 300px;
+  border: dashed 4px white;
+  position: relative;
+  z-index: -1;
+}
+.game > * {
+  transition: all 0.8s;
+  opacity: 0;
+  visibility: hidden;
+}
+.ground {
+  height: 1px;
+  width: 200px;
+  background-color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.pole-big {
+  height: 230px;
+  width: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+}
+.pole-small {
+  height: 2px;
+  width: 100px;
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+.rope {
+  height: 30px;
+  width: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 52px;
+  left: 100px;
+}
+.head {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  left: 86px;
+  top: 80px;
+}
+.torso {
+  height: 64px;
+  width: 2px;
+  background-color: white;
+  position: absolute;
+  top: 108px;
+  left: 100px;
+}
+.arm-one {
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+  position: absolute;
+  top: 129px;
+  left: 76px;
+  transform: rotate(-45deg);
+}
+.arm-two {
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+  position: absolute;
+  top: 129px;
+  left: 96px;
+  transform: rotate(225deg);
+}
+.leg-one {
+  height: 2px;
+  width: 36px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 108px;
+  left: 71px;
+  transform: rotate(-45deg);
+}
+.leg-two {
+  height: 2px;
+  width: 36px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 108px;
+  left: 96px;
+  transform: rotate(225deg);
+}
+.hide {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.fade {
+  background: none;
+  border: 1px solid #fff;
+  color: gray;
+  cursor: default;
+}
+.popup {
+  position: absolute;
+  color: black;
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 4rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  background: rgba(255, 255, 255, 0.527);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.popup .newGame {
+  padding: 20px 40px;
+  border: 1px solid black;
+  background: none;
+  color: black;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 10;
+}
+.popup .newGame:hover {
+  background: black;
+  color: white;
+}
